@@ -15,5 +15,15 @@
   <%= @user.email %>
 </p>
 
+<%- @cookies.each do |cookie| %>
+  <li>
+  <%= cookie.name %>
+  <%= form_tag "/users/#{@user.id}/cookies", method: :post do %>
+    <%= hidden_field_tag :cookie_type_id, cookie.id %>
+    <%= submit_tag 'Add Cookie' %>
+  <% end %>
+
+  </li>
+<% end %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

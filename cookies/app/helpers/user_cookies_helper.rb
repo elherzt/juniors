@@ -1,0 +1,2 @@
+module UserCookiesHelper
+end

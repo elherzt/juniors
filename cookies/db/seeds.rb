@@ -1,7 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+%w(
+Chocolate\ Chip
+Double\ Chocolate\ Chip
+Chocolate\ Chip\ Pecan
+Chocolate\ Chip\ Mint
+Double\ Chocolate\ Chip\ Mint
+Snickerdoodle
+Peanut\ Butter
+Peanut\ Butter\ Chocolate\ Chip
+Oatmeal
+Oatmeal\ Raisin
+Oatmeal\ Chocolate\ Chip
+Oatmeal\ Nut
+Macadamia\ White\ Chocolate
+Almond\ Crunch
+Butter\ Pecan
+Butterscotch
+Plain\ Sugar
+Iced\ Sugar
+Double\ Chocolate\ Raspberry\ Cream
+Banana\ Nut\ Cream
+Kid's\ Delight
+).each do |cookie_name|
+  CookieType.create name: cookie_name
+end

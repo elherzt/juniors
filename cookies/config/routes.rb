@@ -3,6 +3,8 @@ Cookies::Application.routes.draw do
   resources :cookie_types
 
   resources :users
+  get 'users/:id/cookies' => 'user_cookies#index'
+  post 'users/:id/cookies' => 'user_cookies#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
