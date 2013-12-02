@@ -23,3 +23,5 @@ Kid's\ Delight
 ).each do |cookie_name|
   CookieType.create name: cookie_name
 end
+
+User.create email: 'test@cookies.com', password: 'asdfasdf', password_confirmation: 'asdfasdf', admin: true
