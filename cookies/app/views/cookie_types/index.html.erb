@@ -1,0 +1,29 @@
+<h1>Listing cookie_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cookie_types.each do |cookie_type| %>
+      <tr>
+        <td><%= cookie_type.name %></td>
+        <td><%= cookie_type.price %></td>
+        <td><%= link_to 'Show', cookie_type %></td>
+        <td><%= link_to 'Edit', edit_cookie_type_path(cookie_type) %></td>
+        <td><%= link_to 'Destroy', cookie_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cookie type', new_cookie_type_path %>
