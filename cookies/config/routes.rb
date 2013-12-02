@@ -1,4 +1,5 @@
 Cookies::Application.routes.draw do
+  devise_for :users
   resources :cookie_types
 
   resources :users
