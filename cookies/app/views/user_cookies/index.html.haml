@@ -1,0 +1,10 @@
+%h1 UserCookies#index
+%p Find me in app/views/user_cookies/index.html.erb
+%ul
+  - @user_cookies.each do |user_cookie|
+    %li
+      %p
+        Cookie Type: #{user_cookie.cookie_type.name}
+      %p
+        Cookie Type Count: #{user_cookie.cookie_count}
+= link_to 'Back', user_path(@user)

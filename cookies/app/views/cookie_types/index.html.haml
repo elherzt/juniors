@@ -1,0 +1,20 @@
+%h1 Listing cookie_types
+=link_to "show users", users_path
+%table
+  %thead
+    %tr
+      %th Name
+      %th Price
+      %th
+      %th
+      %th
+  %tbody
+    - @cookie_types.each do |cookie_type|
+      %tr
+        %td= cookie_type.name
+        %td= cookie_type.price
+        %td= link_to 'Show', cookie_type
+        %td= link_to 'Edit', edit_cookie_type_path(cookie_type)
+        %td= link_to 'Destroy', cookie_type, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Cookie type', new_cookie_type_path

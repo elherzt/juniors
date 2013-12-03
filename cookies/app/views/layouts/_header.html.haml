@@ -1,0 +1,18 @@
+%header
+  %a{href: "#{root_path}"}
+    %h1 Cookies!!
+    - if !user_signed_in?
+      %ul
+        %li
+          = link_to 'Sign up', new_user_registration_path
+        %li
+          = link_to 'Log in', new_user_session_path
+    - else
+      %ul
+        %li
+          %span
+            = link_to current_user.first_name, current_user
+            |
+          %span
+            =link_to 'log out', destroy_user_session_path, method: :delete 
+%hr
