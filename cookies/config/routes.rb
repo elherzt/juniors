@@ -1,6 +1,6 @@
 Cookies::Application.routes.draw do
   devise_for :users
-  root 'users#index'
+  root 'cookie_types#index'
   resources :cookie_types
   resources :users
   get 'users/:id/cookies' => 'user_cookies#index'
